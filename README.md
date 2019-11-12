@@ -1,9 +1,9 @@
 fastRPCA
 ========
 
-Matlab code for all variants of robust PCA and SPCP. This implements the code from the conference paper "A variational approach to stable principal component pursuit" by Aravkin, Becker, Cevher, Olsen; UAI 2014.
+Matlab code for all variants of robust PCA and SPCP. This fork includes code for Split-SPCP from the paper "Adapting Regularized Low Rank Models for Parallel Architectures" (Driggs, Becker, Aravkin; SISC 2019). See also "A variational approach to stable principal component pursuit" (Aravkin, Becker, Cevher, Olsen; UAI 2014).
 
-Not only is this code fast, but it is the only code we know of that solves all common stable principal component pursuit (SPCP) variants, including the new variants we introduced in the paper. All these variants are in some sense equivalent, but some of them are easier to solve, and some have parameters that are easier to estimate.  See the [paper for details](http://arxiv.org/abs/1406.1089)
+Split-SPCP is generally much faster than other SPCP solvers, and significantly faster than other solvers on the GPU, so it is suitable for extremely large datasets and real-time applications (such as real-time background subtraction). See the [paper for details](https://epubs.siam.org/doi/abs/10.1137/17M1147342?mobileUi=0)
 
 
 <p align="center"><img src="http://amath.colorado.edu/faculty/becker/escalatorImage.jpg" /></p>
@@ -20,7 +20,18 @@ More info on robust PCA and stable principal component pursuit
 
 Citation
 ---------
-bibtex:
+bibtex (for Split-SPCP):
+
+```
+@article{split-spcp2019,
+    author       = "Driggs, D. and Becker, S. and Aravkin, A.",
+    title        = "Adapting Regularized Low-Rank Models for Parallel Architectures",
+    booktitle    = "SIAM J. Sci. Comput.",
+    year         = "2019",
+}
+```
+
+for original code:
 
 ```
 @inproceedings{aravkin2014,
@@ -39,9 +50,5 @@ The code runs on MATLAB and does not require any mex files or installation. Just
 
 Authors
 --------------
-The code was developed by all the authors of the UAI paper, but primary development is due to Stephen Becker and Aleksandr (Sasha) Aravkin. Further contributions are welcome.
-
-## Contact us
-* [Sasha Aravkin](https://sites.google.com/site/saravkin), IBM Research
-* [Stephen Becker](amath.colorado.edu/faculty/becker/), University of Colorado Boulder
+Split-SPCP was implemented by Derek Driggs. The rest of the code was developed by all the authors of the UAI paper, but primary development is due to Stephen Becker and Aleksandr (Sasha) Aravkin. Further contributions are welcome.
 
