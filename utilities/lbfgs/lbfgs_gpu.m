@@ -33,7 +33,7 @@ end
 % Set parameters
 maxIter = setOpts(options,'MaxIter',100);
 verbose = setOpts(options,'verbose',1);
-store   = setOpts(options,'store',100);
+store   = setOpts(options,'store',10);
 gpu     = setOpts(options,'gpu',0);
 c1      = setOpts(options,'c1',1e-4);
 c2      = setOpts(options,'c2',0.9);
